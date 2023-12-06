@@ -28,7 +28,7 @@ class SentenceValidator:
         termination_list: list = ['.', '?', '!']
 
         # Check if first character in string is capitals
-        if not sentence[0].isUpper():
+        if not sentence[0].isupper():
             return Status.CAPITAL_ERROR
         
         # Check if last character in string is one of the characters in termination_list
@@ -36,7 +36,7 @@ class SentenceValidator:
             return Status.TERMINATION_ERROR
 
         quotation_count: int = 0
-        number_buffer: list = []  # Stores the number temporarily for parsing later
+        number_buffer: str = ""  # Stores the number temporarily for parsing later
         number_mode = False  # Mode that changes whether the loop checks for consequent numbers
 
         for i in sentence[1:-1]:
@@ -48,22 +48,24 @@ class SentenceValidator:
                     return Status.NUMBER_ERROR
                 else:
                     number_mode = False
-            else:
-                if i == '"':
+            elif i.isdigit():
+                number_mode = True
+                number_buffer += i
+                
+            if i == '"':
                     quotation_count += 1
                     continue
-                # Check if there are periods in sentence (aside from the last one)
-                elif i == '.':
-                    return Status.PERIOD_ERROR
-                elif i.isdigit():
-                    number_mode = True
-                    number_buffer += i
+            # Check if there are periods in sentence (aside from the last one)
+            elif i == '.':
+                return Status.PERIOD_ERROR
         
         # Check if quotations_count is even
         if quotation_count % 2 == 1:
             return Status.QUOTATION_ERROR
             
+        return Status.OK
+
 
 if __name__ == '__main__':
-    sentence: str = 'The quick brown fox "23".'
-    SentenceValidator.validate(sentence)
+    sentence: str = 'The quick brown fox "3".'
+    print(SentenceValidator.validate(sentence))
