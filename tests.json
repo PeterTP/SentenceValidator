@@ -1,0 +1,102 @@
+{
+    "tests": [
+        {
+            "string": "After exploring fifteen abandoned building, he started to believe in ghosts.",
+            "assert": "OK"
+        },
+        {
+            "string": "Smoky the Bear secretly started 14 fires.", 
+            "assert": "NUMBER_ERROR"
+        },
+        {
+            "string": "Karen believed all traffic laws should be obeyed by all except herself.", 
+            "assert": "OK"
+        },
+        {
+            "string": "there should have been a \"time\" and a \"place\", but this wasn't it.", 
+            "assert": "CAPITAL_ERROR"
+        },
+        {
+            "string": "She saw the Brake lights, but not in 'ime. 0", 
+            "assert": "TERMINATION_ERROR"
+        },
+        {
+            "string": "She was amazed by the large chunks of ice washing up on the beach.", 
+            "assert": "OK"
+        },
+        {
+            "string": "The gloves protect my feet from excess work.", 
+            "assert": "OK"
+        },
+        {
+            "string": "There was no telling what... thoughts would come from the machine.", 
+            "assert": "PERIOD_ERROR"
+        },
+        {
+            "string": "For some unfathomable reason?! the response team didn't consider a lack of milk for my cereal as a proper emergency.", 
+            "assert": "OK"
+        },
+        {
+            "string": "they say people remember important moments in their life well, y.et no one even remembers their own birth@", 
+            "assert": "CAPITAL_ERROR"
+        },
+        {
+            "string": "She says she has the ability to hear the soundtrack of your life.", 
+            "assert": "OK"
+        },
+        {
+            "string": "A dead duck doesn't fly backward..", 
+            "assert": "PERIOD_ERROR"
+        },
+        {
+            "string": "He shaved the peach to prove a point.", 
+            "assert": "OK"
+        },
+        {
+            "string": "There were white out \"\"conditions\"\" in the town; subsequently, the roads were impassable.", 
+            "assert": "OK"
+        },
+        {
+            "string": "She finally understood \"that\" \"\"\"grief was her love with no place for it to go.", 
+            "assert": "QUOTATION_ERROR"
+        },
+        {
+            "string": "My dentist tells me that chewing bricks is very bad for your teeth.", 
+            "assert": "OK"
+        },
+        {
+            "string": "Sarah ran from the serial killer holding a jug of milk,", 
+            "assert": "TERMINATION_ERROR"
+        },
+        {
+            "string": "When he had to picnic on the beach, he purposely put sand in other people’s food.", 
+            "assert": "OK"
+        },
+        {
+            "string": "Don't step on the broken glass!", 
+            "assert": "OK"
+        },
+        {
+            "string": "There was coal in his stocking and he was \"thrilled.", 
+            "assert": "QUOTATION_ERROR"
+        },
+        {
+            "string": "It took me too twenty hours too long to realize that the ceiling hadn't been painted to look like the sky.", 
+            "assert": "OK"
+        },
+        {
+            "string": "The Great Dane looked more like a horse than a dog.", 
+            "assert": "OK"
+        },
+        {
+            "string": "When money was tight, he'd get 50 of lunch money from the local wishing well.", 
+            "assert": "NUMBER_ERROR"
+        },
+        {
+            "string": "Normal activities. Took extraordinary amounts of concentration at the high altitude.", 
+            "assert": "PERIOD_ERROR"
+        }
+    ]
+}
+
+

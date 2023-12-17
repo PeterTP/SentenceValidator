@@ -1,16 +1,16 @@
 from enum import Enum
 
-class Status(Enum):
+class Status(str, Enum):
     """
     Enum that conatins error codes.
     """
     
-    OK = 0
-    CAPITAL_ERROR = 1
-    QUOTATION_ERROR = 2
-    TERMINATION_ERROR = 3
-    PERIOD_ERROR = 4
-    NUMBER_ERROR = 5
+    OK = "OK"
+    CAPITAL_ERROR = "CAPITAL_ERROR"
+    QUOTATION_ERROR = "QUOTATION_ERROR"
+    TERMINATION_ERROR = "TERMINATION_ERROR"
+    PERIOD_ERROR = "PERIOD_ERROR"
+    NUMBER_ERROR = "NUMBER_ERROR"
 
 
 class SentenceValidator:
@@ -64,8 +64,3 @@ class SentenceValidator:
             return Status.QUOTATION_ERROR
             
         return Status.OK
-
-
-if __name__ == '__main__':
-    sentence: str = 'The quick brown fox "3".'
-    print(SentenceValidator.validate(sentence))
